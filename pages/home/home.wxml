@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+    <image class="top-theme" src="{{themeA.entrance_img}}" style="width:{{topThemeW}}rpx;height:{{topThemeH}}rpx"></image>
+<!--    <image class="top-theme" src="/images/test.png" style="width:{{topThemeW}}rpx;height:{{topThemeH}}rpx"></image>-->
+    <swiper class="swiper"
+            autoplay
+            circular
+            indicator-dots
+            indicator-active-color="#157658">
+        <block wx:for="{{bannerB.items}}">
+            <swiper-item>
+                <image class="swiper" src="{{item.img}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <s-category-grid grids="{{grids}}"></s-category-grid>
+
+    <image class="activity" src="{{activityD.entrance_img}}"></image>
+
+    <s-spu-scroll
+            wx:if="{{themeE.online}}"
+            spu-list="{{themeESpu}}"
+            theme="{{themeE}}">
+    </s-spu-scroll>
+</view>
