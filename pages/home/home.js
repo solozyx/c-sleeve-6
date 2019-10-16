@@ -36,6 +36,8 @@ Page({
         await theme.getThemes();
         const themeA = theme.getHomeLocationA()
         const themeE = theme.getHomeLocationE()
+        const themeF = theme.getHomeLocationF()
+        const themeH = theme.getHomeLocationH()
         let themeESpu = []
         if (themeE.online) {
             const data = await Theme.getHomeLocationESpu()
@@ -69,13 +71,19 @@ Page({
         const bannerB = await Banner.getHomeLocationB()
         const grids = await Category.getHomeLocationC()
         const activityD = await Activity.getHomeLocationD()
+
+        const bannerG = await Banner.getHomeLocationG()
+
         this.setData({
             themeA,
-            themeE,
-            themeESpu,
             bannerB,
             grids,
-            activityD
+            activityD,
+            themeE,
+            themeESpu,
+            themeF,
+            bannerG,
+            themeH
         })
     },
 

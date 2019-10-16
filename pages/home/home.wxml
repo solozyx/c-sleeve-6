@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 <view class="container">
-    <image class="top-theme" src="{{themeA.entrance_img}}" style="width:{{topThemeW}}rpx;height:{{topThemeH}}rpx"></image>
+    <image class="top-theme" src="{{themeA.entrance_img}}"></image>
 <!--    <image class="top-theme" src="/images/test.png" style="width:{{topThemeW}}rpx;height:{{topThemeH}}rpx"></image>-->
     <swiper class="swiper"
             autoplay
@@ -19,8 +19,15 @@
     <image class="activity" src="{{activityD.entrance_img}}"></image>
 
     <s-spu-scroll
+            l-class="s-spu-scroll"
             wx:if="{{themeE.online}}"
             spu-list="{{themeESpu}}"
             theme="{{themeE}}">
     </s-spu-scroll>
+
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
+
+    <s-host-list banner="{{bannerG}}"></s-host-list>
+
+    <image src="{{themeH.entrance_img}}" class="fashion"></image>
 </view>

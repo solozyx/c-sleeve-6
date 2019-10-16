@@ -1,6 +1,10 @@
 // components/spu-scroll/index.js
 Component({
   /**
+   * 定义外部样式类
+   */
+  externalClasses:['l-class'],
+  /**
    * 组件的属性列表
    */
   properties: {

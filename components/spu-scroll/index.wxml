@@ -1,5 +1,5 @@
 <wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="string"/>
-<view class="container">
+<view class="container l-class">
     <image class="title" src="{{theme.title_img}}"></image>
     <scroll-view scroll-x class="scroll-view">
         <view class="inner">
@@ -13,7 +13,6 @@
                             l-unit-class="price-unit"
                             l-value-class="price-value">
                     </l-price>
-
                 </view>
             </block>
         </view>

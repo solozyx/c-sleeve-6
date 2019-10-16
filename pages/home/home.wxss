@@ -1,7 +1,8 @@
-/*.container {*/
-/*    background-color: #000000;*/
-/*}*/
-
+/*
+.container {
+   background-color: #000000;
+}
+*/
 .top-theme {
     width: 100%;
     height: 260rpx;
@@ -17,5 +18,27 @@
     margin-top: 20rpx;
     width: 100%;
     height: 310rpx;
+    display: flex;
+    margin-bottom: 20rpx;
+}
+
+/*
+.s-spu-scroll {
+    margin-top: 2rpx;
+}
+*/
+
+.quality {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    width: 100%;
+    height: 880rpx;
+    display: flex;
+}
+
+.fashion {
+    margin-top: 20rpx;
+    width: 100%;
+    height: 840rpx;
     display: flex;
 }
