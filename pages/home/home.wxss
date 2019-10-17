@@ -42,3 +42,18 @@
     height: 840rpx;
     display: flex;
 }
+
+.spu-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20rpx;
+    background-color: #ffffff;
+}
+
+.title-spu-bottom {
+    width: 690rpx;
+    height: 70rpx;
+    margin-top: 25rpx;
+    margin-bottom: 38rpx;
+}

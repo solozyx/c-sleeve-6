@@ -30,4 +30,8 @@
     <s-host-list banner="{{bannerG}}"></s-host-list>
 
     <image src="{{themeH.entrance_img}}" class="fashion"></image>
+
+    <view class="spu-bottom">
+      <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+    </view>
 </view>
