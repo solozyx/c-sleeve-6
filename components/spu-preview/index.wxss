@@ -1,1 +1,62 @@
 /* components/spu-preview/index.wxss */
+
+.container {
+    width: 340rpx;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px 0px rgba(119, 163, 149, 0.2);
+    margin-bottom: 30rpx;
+    background-color: #ffffff;
+}
+
+.img {
+    width: 100%;
+    /* mode设置成widthFix后 高度动态计算 这里不用设置 */
+    /* height: 360rpx; */
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8 rp;
+    margin-top: 6rpx;
+    flex-wrap: wrap;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16rpx 16rpx 22rpx 16rpx;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.l-tag {
+    background-color: #DCEBE6 !important;
+    color: #157658 !important;
+    height: 36rpx !important;
+    padding-left: 6rpx !important;
+    padding-right: 6rpx !important;
+    margin-right: 5rpx !important;
+    /*使得tag标签跟随内容变化宽度*/
+    /*min-width:0rpx !important;*/
+}
+
+.price-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.discount-price {
+    margin-left: 20rpx;
+}
+
+.subtitle {
+    font-size: 24rpx;
+    font-weight: 300;
+    margin-top: 6rpx;
+    color: #888;
+}

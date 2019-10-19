@@ -18,7 +18,9 @@ Page({
         activityD: null,
         // topThemeH: 0,
         // topThemeW: 0,
-        themeE: null
+        themeE: null,
+        spuPaging: null,
+        loadingType: 'loading'
     },
 
     /**
@@ -30,11 +32,13 @@ Page({
     },
 
     async initBottomSpuList() {
-        const paging = await SpuPaging.getLatestPaging()
-        const data = paging.getMoreData()
+        const paging = SpuPaging.getLatestPaging()
+        this.data.spuPaging = paging
+        const data = await paging.getMoreData()
         if (!data) {
             return
         }
+        wx.lin.renderWaterFlow(data.items)
     },
 
     async initAllData() {
@@ -101,8 +105,17 @@ Page({
 
     },
 
-    onReachBottom: function () {
-
+    onReachBottom: async function () {
+        const data = await this.data.spuPaging.getMoreData()
+        if (!data) {
+            return
+        }
+        wx.lin.renderWaterFlow(data.items)
+        if (!data.moreData) {
+            this.setData({
+                loadingType: 'end'
+            })
+        }
     },
 
     onShareAppMessage: function () {

@@ -1,0 +1,30 @@
+/**
+ * @author 落秋
+ * @date 2019/10/18 23:52
+ */
+
+function mainPrice(price, discountPrice) {
+    if (!discountPrice) {
+        return price
+        // 返回一个对象 已确认是否显示
+        // return {
+        //     display: true,
+        //     price: discountPrice
+        // }
+    } else {
+        return discountPrice
+    }
+}
+
+function slashedPrice(price, discountPrice) {
+    if (discountPrice) {
+        return price
+    } else {
+        return
+    }
+}
+
+module.exports = {
+    mainPrice: mainPrice,
+    slashedPrice: slashedPrice
+}

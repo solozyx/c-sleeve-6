@@ -76,7 +76,7 @@ class Paging {
         // 若this.url为对象 那么 改变let url的值 this.url 也会被改变 ？？
         let url = this.url
         const params = `start=${this.start}&count=${this.count}`
-        if (url.indexOf('?') !== -1) {
+        if (url.includes('?')) {
             url += '&' + params
         } else {
             url += '?' + params
