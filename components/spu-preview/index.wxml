@@ -1,6 +1,6 @@
 <wxs src="../../wxs/price.wxs" module="p"></wxs>
 
-<view class="container">
+<view data-pid="{{data.id}}" bind:tap="onItemTap" class="container">
     <!--<image mode="widthFix" class="img" src="{{data.img}}"></image>-->
     <image bind:load="onImgLoad" style="width:{{w}}rpx;height:{{h}}rpx" class="img" src="{{data.img}}"></image>
     <view class="content-container">
@@ -16,7 +16,6 @@
                      unit-size="20"
                      autofix
                      value="{{p.mainPrice(data.price, data.discount_price)}}">
-
             </l-price>
             <l-price wx:if="{{data.discount_price?true:false}}"
                      color="#999999"

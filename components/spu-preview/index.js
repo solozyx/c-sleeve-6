@@ -39,6 +39,15 @@ Component({
         w: 340,
         h: 340*height/width
       })
+    },
+    onItemTap(event) {
+      const pid = event.currentTarget.dataset.pid
+      // 降低组件的通用性：可能不是所有的组件都需要跳转
+      // 区分 业务型组件/通用性组件
+      wx.navigateTo({
+        url: `/pages/detail/detail?pid=${pid}`
+      })
+      //this.triggerEvent('onItemTap', event)
     }
   }
 })
