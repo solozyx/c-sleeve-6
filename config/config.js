@@ -4,7 +4,7 @@
  */
 
 const config = {
-    apiKey: "Ypje0jrGpxakxQAl",
+    apiKey: "GBnxfF5c3trdqjoe",
     apiBaseUrl: "http://se.7yue.pro/v1/"
 }
 
