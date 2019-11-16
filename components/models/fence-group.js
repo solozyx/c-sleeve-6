@@ -9,6 +9,7 @@ class FenceGroup {
 
     spu
     skuList
+    fences = []
     // fenceGroup = []
 
     constructor(spu) {
@@ -21,11 +22,12 @@ class FenceGroup {
         const matrix = this._createMatrix(this.skuList)
         const fences = []
         const AT = matrix.transpose()
-        AT.each(r => {
+        AT.forEach(r => {
             const fence = new Fence(r)
             fence.init()
             fences.push(fence)
         })
+        this.fences = fences
         console.log(fences)
     }
 
@@ -33,7 +35,7 @@ class FenceGroup {
         const matrix = this._createMatrix(this.skuList)
         const fences = []
         let currentJ = - 1;
-        matrix.forEach((element, i, j) => {
+        matrix.each((element, i, j) => {
             if (currentJ !== j) {
                 // 开启一个新列，需要创建一个新的Fence
                 fences[j] = this._createFence(element)
