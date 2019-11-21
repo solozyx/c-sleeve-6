@@ -28,7 +28,7 @@ class FenceGroup {
             fences.push(fence)
         })
         this.fences = fences
-        console.log(fences)
+        // console.log(fences)
     }
 
     initFences1() {
@@ -59,6 +59,15 @@ class FenceGroup {
         // 两个方案
         // 1.数学函数库
         // 2.不用 借助矩阵思维
+    }
+
+    eachCell(cb) {
+        for (let i = 0; i < this.fences.length; i++) {
+            for (let j = 0; j < this.fences[i].cells.length; j++) {
+                const cell = this.fences[i].cells[j]
+                cb(cell, i, j)
+            }
+        }
     }
 
     // getFenceGroup() {

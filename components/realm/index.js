@@ -1,5 +1,6 @@
 // components/realm/index.js
 import {FenceGroup} from "../models/fence-group";
+import {Judger} from "../models/judger";
 
 Component({
   /**
@@ -13,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    judger:Object
   },
 
   /**
@@ -26,6 +27,7 @@ Component({
       }
       const fenceGroup = new FenceGroup(spu)
       fenceGroup.initFences()
+      this.data.judger = new Judger(fenceGroup)
       this.bindInitData(fenceGroup)
     }
   },
@@ -34,9 +36,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-      bindInitData (fenceGroup) {
+      bindInitData(fenceGroup) {
         this.setData({
           fences: fenceGroup.fences
+        })
+      },
+      onCellTap(event) {
+        const judger = this.data.judger
+        const cell = event.detail.cell
+        const x = event.detail.x
+        const y = event.detail.y
+        judger.judge(cell, x, y)
+        this.setData({
+          fences: judger.fenceGroup.fences
         })
       }
   }
